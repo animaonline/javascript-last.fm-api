@@ -91,7 +91,9 @@ function LastFM(options){
 		else{
 			/* Get JSONP callback name. */
 			var jsonp = 'jsonp' + new Date().getTime();
-
+			if (typeof unsafeWindow == 'object')
+				jsonp = 'unsafeWindow.' + jsonp;
+				
 			/* Calculate cache hash. */
 			var hash = auth.getApiSignature(params);
 
