@@ -111,7 +111,11 @@ function LastFM(options){
 			params.format   = 'json';
 
 			/* Create JSONP callback function. */
-			window[jsonp] = function(data){
+			if (typeof unsafeWindow == 'object')
+				theWindow = unsafeWindow;
+			else
+				theWindow = window;
+			theWindow[jsonp] = function(data){
 				/* Is a cache available?. */
 				if(typeof(cache) != 'undefined'){
 					var expiration = cache.getExpirationTime(params);
