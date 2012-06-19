@@ -841,6 +841,7 @@ function LastFM(options){
 			}
 
 			string += apiSecret;
+			console.log('base sig:',string)
 
 			/* Needs lastfm.api.md5.js. */
 			return md5(string);
