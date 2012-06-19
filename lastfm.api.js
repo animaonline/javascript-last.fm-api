@@ -76,6 +76,7 @@ function LastFM(options){
 			/* Write POST parameters as input fields. */
 			for(var param in params){
 				doc.write('<input type="text" name="' + param + '" value="' + params[param] + '">');
+				console.log('name:',param,'value:',params[param])
 			}
 
 			/* Write automatic form submission code. */
