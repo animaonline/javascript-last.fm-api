@@ -76,7 +76,6 @@ function LastFM(options){
 			/* Write POST parameters as input fields. */
 			for(var param in params){
 				doc.write('<input type="text" name="' + param + '" value="' + params[param] + '">');
-				console.log('name:',param,'value:',params[param])
 			}
 
 			/* Write automatic form submission code. */
@@ -841,7 +840,7 @@ function LastFM(options){
 			}
 
 			string += apiSecret;
-			console.log('base sig:',string)
+			//console.log('base sig:',string)
 
 			/* Needs lastfm.api.md5.js. */
 			return md5(string);
