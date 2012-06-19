@@ -357,7 +357,7 @@ function LastFM(options){
 			/* Save API URL and set new one (needs to be done due to a cookie!). */
 			var previuousApiUrl = apiUrl;
 
-			apiUrl = 'http://ext.last.fm/2.0/';
+			apiUrl = 'http://www.last.fm/api/auth/';
 
 			signedCall('auth.getWebSession', null, null, callbacks);
 
